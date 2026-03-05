@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+<body class="theme-1 bg-1 text-white font-bold flex flex--column flex--center">
+  <div class="calculator container">
+    <header class="flex flex--space-between">
+      <h1 class="text-2 font-bold">calc</h1>
+      <div class="theme-selector flex flex--center gap-3">
+        <p class="theme-selector__label text-2">THEME</p>
+        <div class="theme-selector__control flex flex--column">
+          <div class="theme-selector__options text-2 flex flex--space-around">
+            <span class="theme-selector__option theme-selector__option--1">1</span>
+            <span class="theme-selector__option theme-selector__option--2">2</span>
+            <span class="theme-selector__option theme-selector__option--3">3</span>
+          </div>
+          <div class="theme-selector__box bg-2">
+            <button id="theme-toggle" class="theme-selector__toggle key-2-bg" value="1" aria-label="Toggle theme" aria-pressed="false"></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="calculator__main">
+      <section class="calculator__display bg-3">
+        <p id="calculator__display-text" class="calculator__display-text text-white font-bold">0</p>
+      </section>
+      <section id="keypad" class="calculator__keypad bg-2 grid"></section>
+    </main>
+  </div>
+
+  <footer class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>. </p>
+    <p>Coded by <a href="https://www.frontendmentor.io/profile/why-not-phoenix">Dominion (why-not-phoenix)</a>.</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

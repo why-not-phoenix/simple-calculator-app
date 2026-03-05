@@ -1,0 +1,340 @@
+/* ------------------------- */
+/* CUSTOM PROPERTIES         */
+/* ------------------------- */
+
+:root {
+    /* Family */
+    --sans: "League Spartan", sans-serif;
+
+    /* Colors */
+
+    /* General */
+    --white: 0, 0%, 100%;
+
+    /* Theme 1 */
+    .theme-1 {
+        /* Backgrounds */
+        --bg-1: 222, 26%, 31%;
+        --bg-2: 223, 31%, 20%;
+        --bg-3: 224, 36%, 15%;
+
+        /* Keys */
+        --key-1-bg: 225, 21%, 49%;
+        --key-1-shadow: 224, 28%, 35%;
+        --key-2-bg: 6, 63%, 50%;
+        --key-2-shadow: 6, 70%, 34%;
+        --key-3-bg: 30, 25%, 89%;
+        --key-3-shadow: 28, 16%, 65%;
+
+        /* Text */
+        --text: 221, 14%, 31%;
+        --text-2: 30, 25%, 89%;
+    }
+
+
+    /* Theme 2 */
+    .theme-2 {
+        /* Backgrounds */
+        --bg-1: 0, 0%, 90%;
+        --bg-2: 0, 5%, 81%;
+        --bg-3: 0, 0%, 93%;
+
+        /* Keys */
+        --key-1-bg: 185, 42%, 37%;
+        --key-1-shadow: 185, 58%, 25%;
+        --key-2-bg: 25, 98%, 40%;
+        --key-2-shadow: 25, 99%, 27%;
+        --key-3-bg: 45, 7%, 89%;
+        --key-3-shadow: 35, 11%, 61%;
+
+        /* Text */
+        --text: 60, 10%, 19%;
+        --text-2: 60, 10%, 19%;
+    }
+
+
+    /* Theme 3 */
+    .theme-3 {
+        /* Backgrounds */
+        --bg-1: 268, 75%, 9%;
+        --bg-2: 268, 71%, 12%;
+        --bg-3: 268, 71%, 12%;
+
+        /* Keys */
+        --key-1-bg: 281, 89%, 26%;
+        --key-1-shadow: 285, 91%, 52%;
+        --key-2-bg: 176, 100%, 44%;
+        --key-2-shadow: 177, 92%, 70%;
+        --key-3-bg: 268, 47%, 21%;
+        --key-3-shadow: 290, 70%, 36%;
+
+        /* Text */
+        --text: 52, 100%, 62%;
+        --text-2: 52, 100%, 62%;
+        --text-3: 198, 20%, 13%;
+    }
+}
+
+/* ------------------------- */
+/* RESET                     */
+/* ------------------------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    transition: 0.5s ease;
+}
+
+/* NEW! : Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, h5, p,
+figure, picture {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+}
+
+button {
+    outline: none;
+    background-color: inherit;
+    border: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set core body defaults */
+body {
+    font-family: var(--sans);
+
+    min-height: 100vh;
+    padding-block: 1.75rem;
+}
+
+h1, h2, h3, h4, h5, p {
+    font-weight: 400;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* NEW! : Accessibility
+Helps keep default settings for users who actually set them to reduce animation */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ------------------------- */
+/* UTILITY CLASSES           */
+/* ------------------------- */
+
+/* backgrounds */
+.bg-1 {background-color: hsl(var(--bg-1));}
+.bg-2 {background-color: hsl(var(--bg-2));}
+.bg-3 {background-color: hsl(var(--bg-3));}
+
+/* keys */
+.key-1-bg {background-color: hsl(var(--key-1-bg));}
+.key-2-bg {background-color: hsl(var(--key-2-bg));}
+.key-3-bg {background-color: hsl(var(--key-3-bg));}
+
+/* text */
+.text-white {color: hsl(var(--white));}
+.text-1 {color: hsl(var(--text));}
+.text-2 {color: hsl(var(--text-2));}
+.text-3 {color: hsl(var(--text-3));}
+
+.font-bold {font-weight: 700;}
+
+/* structure */
+.flex {display: flex;}
+.flex--column {flex-direction: column;}
+.flex--center {justify-content: center; align-items: center;}
+.flex--space-between {justify-content: space-between;}
+.flex--space-around {justify-content: space-around;}
+.gap-1 {gap: 1rem;}
+.gap-2 {gap: 1.25rem;}
+.gap-3 {gap: 1.5rem;}
+
+.grid {display: grid;}
+
+/* ------------------------- */
+/* COMPONENTS                */
+/* ------------------------- */
+
+/* container */
+.container {
+    width: min(86.4%, 20.25rem);
+}
+
+/* toggle */
+.theme-selector__control {
+    gap: 0.375rem;
+}
+
+.theme-selector__box {
+    position: relative;
+    width: 4.5rem;
+    height: 1.625rem;
+    border-radius: 1rem;
+    padding: 0.25rem;
+}
+
+.theme-selector__toggle {
+    display: block;
+    position: relative;
+    width: 1.125rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.theme-selector__toggle[value="1"] {left: 0}
+.theme-selector__toggle[value="2"] {left: calc(50% - 1.125rem/2)}
+.theme-selector__toggle[value="3"] {left: calc(100% - 1.125rem)}
+
+/* btn */
+.btn {
+    border-radius: 3px;
+    width: 100%;
+    font-size: 28px;
+    cursor: pointer;
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.btn:hover,
+.theme-selector__toggle:hover {
+    filter: brightness(1.5);
+}
+
+.btn--bg-1 {
+    background-color: hsl(var(--key-1-bg));
+    box-shadow: 0px 4px 0px hsl(var(--key-1-shadow));
+}
+
+.btn--bg-2 {
+    background-color: hsl(var(--key-2-bg));
+    box-shadow: 0px 4px 0px hsl(var(--key-2-shadow));
+}
+
+.btn--bg-3 {
+    background-color: hsl(var(--key-3-bg));
+    box-shadow: 0px 4px 0px hsl(var(--key-3-shadow));
+}
+
+.btn--large {
+    grid-column: span 2;
+}
+
+.btn:active {
+    transform: translateY(4px);
+    box-shadow: 0px 0px 0px black;
+}
+
+/* ------------------------- */
+/* SECTIONS                  */
+/* ------------------------- */
+
+/* Calculator */
+.calculator__main {
+    margin-block-start: 2rem;
+}
+
+.calculator__display {
+    min-height: 5.5rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: right;
+}
+
+.calculator__display-text {
+    font-size: 2.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.calculator__keypad {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8125rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    min-height: 26.25rem;
+    padding: 1.5rem;
+}
+
+.attribution { 
+    font-size: 15px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 550px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        width: min(86.4%, 33.75rem);
+    }
+
+    .btn {
+        font-size: 32px;
+    }
+
+    .theme-selector__label,
+    .theme-selector__options {
+        font-size: 1.125rem;
+    }
+
+    .calculator__display {
+        min-height: 8rem;
+        padding: 2rem;
+    }
+
+    .calculator__display-text {
+        font-size: 3.5rem;
+    }
+
+    .calculator__keypad {
+        padding: 1.875rem;
+        gap: 1.5rem;
+        min-height: 30rem;
+    }
+}
