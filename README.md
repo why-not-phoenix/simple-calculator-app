@@ -40,8 +40,8 @@ Mobile
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-simple-calculator-application-MR5j3A60dm](https://www.frontendmentor.io/solutions/responsive-simple-calculator-application-MR5j3A60dm)
+- Live Site URL: [https://why-not-phoenix.github.io/simple-calculator-app/](https://why-not-phoenix.github.io/simple-calculator-app/)
 
 ## My process
 
