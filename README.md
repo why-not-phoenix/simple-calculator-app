@@ -29,9 +29,9 @@ Users should be able to:
 ### Screenshot
 
 Desktop
-![](./design/screenshot-desktop.png)
-![](./design/screenshot-desktop-theme-2.png)
-![](./design/screenshot-desktop-theme-3.png)
+[](./design/screenshot-desktop.png)
+[](./design/screenshot-desktop-theme-2.png)
+[](./design/screenshot-desktop-theme-3.png)
 
 Mobile
 ![](./design/screenshot-mobile.png)
