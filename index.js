@@ -90,7 +90,7 @@ const calculatorFunctionality = (key) => {
         }
     }
 
-    if (displayText.textContent.length >= 10) {
+    if (displayText.textContent.length >= 20) {
         setTimeout(() => {
             displayText.textContent = 0;
         }, 1500);
@@ -194,4 +194,5 @@ function changeTheme(themeOld, themeNew) {
         equalBtn.classList.remove("text-3");
         equalBtn.classList.add("text-white");
     }
+
 };
